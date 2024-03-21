@@ -9,8 +9,8 @@ export const skill = {
       type: "string",
     },
     {
-      name: "colour",
-      title: "Colour",
+      name: "color",
+      title: "Color",
       type: "string",
     },
     {

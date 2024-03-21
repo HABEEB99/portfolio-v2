@@ -43,16 +43,9 @@ export const project = {
     },
 
     {
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      of: [
-        {
-          name: "tag",
-          title: "Tag",
-          type: "string",
-        },
-      ],
+      name: "type",
+      title: "Type",
+      type: "string",
     },
   ],
 };
