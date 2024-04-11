@@ -76,7 +76,7 @@ body,
     @apply border-border;
   }
   body {
-    @apply bg-light dark:bg-dark text-foreground !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-modal hover:!scrollbar-thumb-btn;
+    @apply bg-light dark:bg-dark text-foreground !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-icon hover:!scrollbar-thumb-btn;
   }
 }
 
@@ -94,6 +94,7 @@ body,
   }
 
   .section {
-    @apply w-full min-h-screen scroll-mt-24 flex flex-col items-center;
+    /* @apply w-screen min-h-screen scroll-mt-24 flex flex-col items-center wrapper; */
+    @apply w-screen min-h-screen flex flex-col items-center wrapper;
   }
 }

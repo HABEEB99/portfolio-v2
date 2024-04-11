@@ -19,11 +19,11 @@ const config = {
     },
     extend: {
       colors: {
-        light: "#FFFFFA",
-        dark: "#080705",
-        btn: "#702632",
-        icon: "#912F40",
-        modal: "#40434E",
+        light: "#FFFAFB",
+        dark: "#131515",
+        btn: "#339989",
+        icon: "#7DE2D1",
+        modal: "#2B2C28",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
