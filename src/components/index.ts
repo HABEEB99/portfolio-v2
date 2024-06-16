@@ -1,6 +1,7 @@
 import { AboutSection } from "@/components/sections/about-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { EducationCard } from "@/components/cards/education-card";
+import { ExperienceCard } from "@/components/cards/experience-card";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
 import { Logo } from "@/components/logo";
@@ -20,6 +21,7 @@ export {
   AboutSection,
   ContactSection,
   EducationCard,
+  ExperienceCard,
   Header,
   HeroSection,
   Logo,

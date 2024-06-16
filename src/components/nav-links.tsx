@@ -5,7 +5,8 @@ import { cn, navItems } from "@/lib/utils";
 import Link from "next/link";
 
 export const NavLinks = () => {
-  const { activeSection, setActiveSection } = useActiveSection();
+  const { activeSection, setActiveSection, setLastClicked } =
+    useActiveSection();
 
   return (
     <div className="hidden lg:flex items-center justify-center space-x-4">
@@ -14,7 +15,10 @@ export const NavLinks = () => {
           href={link}
           key={title}
           className="flex items-center justify-center space-x-1 group"
-          onClick={() => setActiveSection(title)}
+          onClick={() => {
+            setActiveSection(title);
+            setLastClicked(Date.now());
+          }}
         >
           <Icon
             className={cn(
