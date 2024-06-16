@@ -5,7 +5,7 @@ import { PhoneCall } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="w-full h-[8vh] bg-gray-200 flex items-center justify-between fixed inset-y-0 z-[999] wrapper">
+    <header className="w-full h-[8vh] shadow-sm shadow-modal flex items-center justify-between fixed inset-y-0 !z-[999] wrapper">
       <Logo />
 
       <NavLinks />
