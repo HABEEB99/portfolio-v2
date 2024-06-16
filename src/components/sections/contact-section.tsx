@@ -1,7 +1,12 @@
 "use client";
 
+import * as z from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { SectionHeader } from "@/components";
-import { useActiveSection } from "@/hooks/use-active-section";
+import { useSectionInView } from "@/hooks/use-section-in-view";
+
 import {
   Mail,
   MessageSquare,
@@ -11,13 +16,8 @@ import {
   Send,
   User,
 } from "lucide-react";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
-import * as z from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Form,
   FormControl,
@@ -25,27 +25,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../ui/select";
-import { Textarea } from "../ui/textarea";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 export const ContactSection = () => {
-  const { setActiveSection } = useActiveSection();
-  const { ref, inView } = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Contacts");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Contacts");
 
   const contactItems = [
     { title: "Email", value: "habeebahmadu1@gmail.com", icon: Mail },

@@ -29,6 +29,8 @@ const HomePage = async () => {
     client.fetch(qualificationQuery, {}, { next: { revalidate: 1800 } }),
   ]);
 
+  console.log(qualification);
+  console.log(projects);
   return (
     <main
       className="w-full h-screen scroll-smooth snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 !scrollbar-thin 
